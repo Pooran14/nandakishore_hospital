@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Patient Details</title>
+    <style>
+        body {
+            background-color: #e0f7fa;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 250vh;
+            margin: 0;
+            font-family: Arial, sans-serif;
+        }
+        .container {
+            background: white;
+            padding: 40px;
+            border-radius: 10px;
+            box-shadow: 0 6px 15px rgba(0, 0, 0, 0.2);
+            width: 450px;
+            text-align: center;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+        .container:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
+        }
+        h2 {
+            color: #007BFF;
+            margin-bottom: 20px;
+        }
+        .input-group {
+            margin-bottom: 15px;
+            text-align: left;
+        }
+        .input-group label {
+            display: block;
+            font-weight: bold;
+            margin-bottom: 5px;
+            color: #333;
+            font-size: 16px;
+        }
+        .input-group input, .input-group select, .input-group textarea {
+            width: 100%;
+            padding: 10px;
+            border: 1px solid #007BFF;
+            border-radius: 5px;
+            font-size: 16px;
+            transition: all 0.3s ease;
+        }
+        .input-group input:focus, .input-group select:focus, .input-group textarea:focus {
+            border-color: #0056b3;
+            outline: none;
+            box-shadow: 0 0 8px rgba(0, 91, 187, 0.5);
+        }
+        .btn {
+            background: #007BFF;
+            color: white;
+            padding: 10px;
+            border: none;
+            width: 100%;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 18px;
+            transition: background 0.3s ease, transform 0.2s ease;
+        }
+        .btn:hover {
+            background: #0056b3;
+            transform: scale(1.05);
+        }
+        .btn:active {
+            transform: scale(0.98);
+        }
+    </style>
+    <script>
+        function submitDetails(event) {
+            event.preventDefault();
+            alert("Patient details submitted successfully!");
+        }
+    </script>
+</head>
+<body>
+    <div class="container">
+        <h2>Enter Patient Details</h2>
+        <form onsubmit="submitDetails(event)">
+            <div class="input-group">
+                <label for="patient-code">Patient Code</label>
+                <input type="text" id="patient-code" required>
+            </div>
+            <div class="input-group">
+                <label for="name">Patient Name</label>
+                <input type="text" id="name" required>
+            </div>
+            <div class="input-group">
+                <label for="age">Age</label>
+                <input type="number" id="age" required>
+            </div>
+            <div class="input-group">
+                <label for="gender">Gender</label>
+                <select id="gender" required>
+                    <option value="Male">Male</option>
+                    <option value="Female">Female</option>
+                    <option value="other">other</option>
+                    
+                </select>
+            </div>
+            <div class="input-group">
+                <label for="diagnosis">Diagnosis</label>
+                <input type="text" id="diagnosis" required>
+            </div>
+            <div class="input-group">
+                <label for="contact">Contact Number</label>
+                <input type="tel" id="contact" required>
+            </div>
+            <div class="input-group">
+                <label for="address">Address</label>
+                <textarea id="address" rows="3" required></textarea>
+            </div>
+            <div class="input-group">
+                <label for="medical-history">Medical History</label>
+                <textarea id="medical-history" rows="4" required></textarea>
+            </div>
+           
+            <div class="input-group">
+                <label for="medications">Current Medications</label>
+                <textarea id="medications" rows="3" required></textarea>
+            </div>
+            <div class="input-group">
+                <label for="doctor-notes">Doctor's Notes</label>
+                <textarea id="doctor-notes" rows="4"></textarea>
+            </div>
+            <button type="submit" class="btn">Submit</button>
+        </form>
+    </div>
+</body>
+</html>

@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us - Hospital</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #d0e8f2;
+            margin: 0;
+            padding: 0;
+        }
+        .container {
+            width: 80%;
+            margin: 50px auto;
+            background: white;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            text-align: center;
+            transition: transform 0.3s ease-in-out;
+        }
+        .container:hover {
+            transform: scale(1.02);
+        }
+        h1 {
+            color: #0077b6;
+        }
+        .contact-info {
+            margin-top: 20px;
+            padding: 15px;
+            background: #f0f8ff;
+            border-radius: 8px;
+            transition: background 0.3s, transform 0.3s;
+        }
+        .contact-info:hover {
+            background: #caf0f8;
+            transform: scale(1.05);
+        }
+        p {
+            color: #555;
+            line-height: 1.6;
+        }
+        .fade-in {
+            opacity: 0;
+            transform: translateY(20px);
+            animation: fadeIn 1s forwards;
+        }
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+        .contact-form {
+            margin-top: 20px;
+        }
+        input, textarea {
+            width: 100%;
+            padding: 10px;
+            margin: 10px 0;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+        button {
+            background: #0077b6;
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background 0.3s;
+        }
+        button:hover {
+            background: #005f87;
+        }
+    </style>
+</head>
+<body>
+    <div class="container fade-in">
+        <h1>Contact Us</h1>
+        <div class="contact-info">
+            <p><strong>Address:</strong> Srinivasan Rajalakshmi Memorial Hospital, No. 11/77, 6th Street, Voltas Colony, Nanganallur, Kanchipuram, Tamil Nadu - 600061</p>
+            <p><strong>Phone:</strong> +91 6868856897</p>
+            <p><strong>Email:</strong> Rajalakshmi@hospital.com</p>
+            <p><strong>Working Hours:</strong> Mon-Sat: 8 AM - 8 PM, Sun: 9 AM - 5 PM</p>
+        </div>
+        <div class="contact-form">
+            <h2>Get in Touch</h2>
+            <form>
+                <input type="text" placeholder="Your Name" required>
+                <input type="email" placeholder="Your Email" required>
+                <textarea rows="4" placeholder="Your Message" required></textarea>
+                <button type="submit">Send Message</button>
+            </form>
+        </div>
+    </div>
+</body>
+</html>

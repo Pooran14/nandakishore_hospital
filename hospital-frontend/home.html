@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Medilab</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="styles.css">
+    <script src="https://kit.fontawesome.com/a076d05399.js"></script>
+</head>
+<body>
+
+    <!-- Top Contact Bar -->
+    <div class="top-bar bg-primary text-white text-center py-1">
+        <small>📧Rajalakshmi@hospital.com | 📞 +91 9999 2222</small>
+    </div>
+
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-light bg-white shadow">
+        <div class="container">
+            <a class="navbar-brand fw-bold text-primary" href="#">Rajalakshmi hospital</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item"><a class="nav-link hover-effect" href="home.html">Home</a></li>
+                    <li class="nav-item"><a class="nav-link hover-effect" href="about.html">About</a></li>
+                    <li class="nav-item"><a class="nav-link hover-effect" href="service.html">Services</a></li>
+                    <li class="nav-item"><a class="nav-link hover-effect" href="patients.html">patients</a></li>
+                    <li class="nav-item"><a class="nav-link hover-effect" href="doctor.html">Doctors</a></li>
+                    <li class="nav-item"><a class="nav-link hover-effect" href="contact.html">Contact</a></li>
+                </ul>
+                <a href="appointment.html" class="btn btn-primary ms-3">Make an Appointment</a>
+
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero d-flex align-items-center text-center">
+        <div class="container">
+            <h1 class="fw-bold text-primary">WELCOME TO Rajalakshmi Hospital</h1>
+            <p class="text-dark">We are a team of talented designers making websites with Bootstrap</p>
+            <div class="row mt-4">
+                <div class="col-md-4 mb-3">
+                    <div class="card hover-card h-100">
+                        <div class="card-body text-center d-flex flex-column">
+                            <h5 class="text-dark">Why Choose Rajalakshmi Hospital?</h5>
+                            <p class="flex-grow-1 text-dark"></p>
+                            <a href="learn more.html" class="btn btn-primary mt-auto">Learn More</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4 mb-3">
+                    <div class="card hover-card h-100">
+                        <div class="card-body text-center d-flex flex-column">
+                            <h5 class="text-dark">Quality Services</h5>
+                            <p class="flex-grow-1 text-dark">Providing top medical services for our patients with modern equipment.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4 mb-3">
+                    <div class="card hover-card h-100">
+                        <div class="card-body text-center d-flex flex-column">
+                            <h5 class="text-dark">Expert Doctors</h5>
+                            <p class="flex-grow-1 text-dark">Our team consists of highly skilled and experienced doctors.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Bootstrap Scripts -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+
+    <style>
+        /* General Styles */
+        body {
+            font-family: Arial, sans-serif;
+        }
+
+        /* Navbar */
+        .navbar-nav .nav-link {
+            font-weight: 500;
+            color: #333;
+        }
+        .navbar-nav .nav-link:hover {
+            background-color: #007bff;
+            color: white !important;
+            border-radius: 5px;
+            transition: all 0.3s ease;
+        }
+
+        /* Hero Section */
+        .hero {
+            background: url('https://source.unsplash.com/1600x900/?doctor,hospital') no-repeat center center/cover;
+            height: 90vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+        }
+
+        /* Hover Effect */
+        .hover-card {
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+        .hover-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0px 10px 30px rgba(0, 0, 0, 0.2);
+        }
+
+        /* Ensure Equal Card Height */
+        .card {
+            height: 100%;
+        }
+        .card-body {
+            display: flex;
+            flex-direction: column;
+        }
+        .card-body p {
+            flex-grow: 1;
+        }
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            .hero {
+                height: 60vh;
+                padding: 20px;
+            }
+            .navbar-nav {
+                text-align: center;
+            }
+        }
+    </style>
+</body>
+</html>

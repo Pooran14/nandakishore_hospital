@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Hospital Login</title>
+  <style>
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      margin: 0;
+      font-family: 'Segoe UI', sans-serif;
+      background: linear-gradient(135deg, #0077b6, #90e0ef);
+      height: 100vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .login-container {
+      background-color: white;
+      padding: 40px 30px;
+      border-radius: 12px;
+      box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+      width: 100%;
+      max-width: 400px;
+    }
+
+    .login-container h2 {
+      text-align: center;
+      color: #0077b6;
+      margin-bottom: 20px;
+    }
+
+    input, select {
+      width: 100%;
+      padding: 12px 15px;
+      margin: 10px 0;
+      border: 1px solid #ccc;
+      border-radius: 8px;
+      font-size: 14px;
+    }
+
+    button {
+      width: 100%;
+      padding: 12px;
+      background-color: #0077b6;
+      color: white;
+      border: none;
+      border-radius: 8px;
+      font-size: 16px;
+      cursor: pointer;
+      margin-top: 15px;
+      transition: background 0.3s ease;
+    }
+
+    button:hover {
+      background-color: #005f87;
+    }
+
+    .note {
+      text-align: center;
+      margin-top: 15px;
+      color: #333;
+      font-size: 14px;
+    }
+
+    .note a {
+      color: #0077b6;
+      text-decoration: none;
+    }
+
+    .note a:hover {
+      text-decoration: underline;
+    }
+
+    .forgot-password {
+      text-align: right;
+      margin-top: -5px;
+      margin-bottom: 15px;
+      font-size: 13px;
+    }
+
+    .forgot-password a {
+      color: #0077b6;
+      text-decoration: none;
+    }
+
+    .forgot-password a:hover {
+      text-decoration: underline;
+    }
+  </style>
+</head>
+<body>
+  <div class="login-container">
+    <h2>Hospital Login</h2>
+    <form id="loginForm">
+      <select id="role" required>
+        <option value="">-- Select Role --</option>
+        <option value="patient">Patient</option>
+        <option value="doctor">Doctor</option>
+        <option value="receptionist">Receptionist</option>
+        <option value="admin">Admin</option>
+      </select>
+
+      <input type="text" id="username" placeholder="Username" required />
+      <input type="password" id="password" placeholder="Password" required />
+
+      <div class="forgot-password">
+        <a href="forgot-password.html">Forgot Password?</a>
+      </div>
+
+      <button type="submit">Sign In</button>
+    </form>
+    <div class="note">
+      New patient? <a href="#">Register here</a>
+    </div>
+  </div>
+
+  <script>
+    document.getElementById("loginForm").addEventListener("submit", function(e) {
+      e.preventDefault();
+
+      const role = document.getElementById("role").value.toLowerCase();
+      const username = document.getElementById("username").value.trim().toLowerCase();
+      const password = document.getElementById("password").value;
+
+      // Example hardcoded credentials
+      const validUsers = [
+        { role: "patient", username: "john", password: "patient" },
+        { role: "doctor", username: "priya", password: "doctor" },
+        { role: "receptionist", username: "maya", password: "reception" },
+        { role: "admin", username: "admin", password: "admin123" }
+      ];
+
+      const isValid = validUsers.some(user =>
+        user.role === role && user.username === username && user.password === password
+      );
+
+      if (isValid) {
+        alert("Login successful!");
+        window.location.href = "home.html";
+      } else {
+        alert("Invalid credentials or role.");
+      }
+    });
+  </script>
+</body>
+</html>
